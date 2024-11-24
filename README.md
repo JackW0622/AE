@@ -9,36 +9,3 @@ concept: Use the existing facial recognition database and application as a start
 First, use OpenCV to allow the capture of facial expressions;
 A very small sections of code allowing faces to be extracted:
 
-!pip install opencv-python-headless
-import cv2
-print(cv2.__version__)
-from google.colab.patches import cv2_imshow 
-
-image = cv2.imread('IMG_1664.jpeg')
-
-
-if image is None:
-  print("Error: Image not loaded. Check the file path.")
-else:
- 
-  cv2_imshow(image)
-
-
-  cv2.waitKey(0)
-  cv2.destroyAllWindows()
-
-  face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-
-
-  gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-  faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
-
-  for (x, y, w, h) in faces:
-    cv2.rectangle(image, (x, y), (x+w, y+h), (255, 0, 0), 2)
-
-
-  cv2_imshow(image)
-
-  cv2.waitKey(0)
-  cv2.destroyAllWindows()
