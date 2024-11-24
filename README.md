@@ -117,6 +117,7 @@ else:
     print("No faces detected in the image.")
 ```
 This is the result when run on google colab:
+
 <img width="623" alt="Screenshot 2024-11-24 at 22 40 09" src="https://github.com/user-attachments/assets/238ae607-17d6-4d9c-97ec-31810ba6d6f7">
 <img width="387" alt="Screenshot 2024-11-24 at 22 40 15" src="https://github.com/user-attachments/assets/0cf79ff0-6ed8-4b14-a2cc-a3ad770743a8">
 
